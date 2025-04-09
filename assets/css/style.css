@@ -1,0 +1,202 @@
+/* Definimos aqui as variáveis de cores do modo claro */
+:root {
+  --bg: #dde9f4;              /* Cor de fundo geral do site */
+  --texto: #333;              /* Cor padrão dos textos */
+  --bg-header: rgba(0, 0, 0, 0.4);  /* Sobreposição escura semi-transparente no banner */
+  --bg-card: white;           /* Cor de fundo dos cards (artigos e formulários) */
+  --bg-footer: #2c3e50;       /* Cor do rodapé */
+  --botao: #2ecc71;           /* Cor de fundo dos botões */
+  --botao-hover: #27ae60;     /* Cor dos botões ao passar o mouse */
+}
+
+/* Modo escuro: sobrescreve as variáveis quando ativado */
+.dark-mode {
+  --bg: #1c1c1c;              /* Fundo geral escuro */
+  --texto: #f0f0f0;           /* Texto claro */
+  --bg-header: rgba(0, 0, 0, 0.6);  /* Header mais escuro */
+  --bg-card: #2a2a2a;         /* Cor escura para os cards */
+  --bg-footer: #141414;       /* Rodapé mais escuro */
+  --botao: #3498db;           /* Cor do botão no modo escuro */
+  --botao-hover: #2980b9;     /* Cor do botão ao passar o mouse */
+}
+
+/* Suaviza o comportamento de rolagem da página ao clicar nos links de navegação */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilo geral do corpo da página */
+body {
+  font-family: 'Montserrat', sans-serif;  /* Fonte principal do site */
+  margin: 0;               /* Remove margens padrão */
+  padding: 0;              /* Remove espaçamentos padrão */
+  line-height: 1.6;        /* Altura entre linhas */
+  background-color: var(--bg); /* Usa a cor de fundo definida na variável */
+  color: var(--texto);     /* Cor principal dos textos */
+}
+
+/* Estilização do cabeçalho */
+header {
+  background-image: url('../imagens/banner.jpg');  /* Imagem de fundo do banner */
+  background-size: cover;           /* Faz a imagem cobrir todo o cabeçalho */
+  background-position: center;      /* Centraliza a imagem */
+  background-repeat: no-repeat;     /* Evita que a imagem se repita */
+  padding: 4em 1em;                 /* Espaçamento interno (em cima/baixo e laterais) */
+  color: white;                     /* Texto branco sobre o banner */
+  text-align: center;              /* Centraliza o texto */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+  position: relative;              /* Necessário para posicionar ::before */
+}
+
+/* Sobreposição escura semi-transparente no banner */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: var(--bg-header);   /* Cor definida pela variável */
+  z-index: 0;                     /* Coloca atrás do conteúdo principal */
+}
+
+/* Mantém o conteúdo acima da sobreposição escura */
+header h1,
+header nav,
+#toggle-tema {
+  position: relative;
+  z-index: 1;
+}
+
+/* Botão de alternância de tema */
+#toggle-tema {
+  position: absolute;       /* Posiciona no canto superior direito */
+  top: 1em;
+  right: 1em;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--botao);   /* Usa a cor do botão do tema atual */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;  /* Animação suave ao passar o mouse */
+}
+
+#toggle-tema:hover {
+  background-color: var(--botao-hover); /* Altera a cor no hover */
+}
+
+/* Menu de navegação no topo */
+nav ul {
+  display: flex;              /* Alinha os itens em linha */
+  justify-content: center;   /* Centraliza o conteúdo */
+  gap: 2em;                   /* Espaçamento entre os itens */
+  list-style: none;          /* Remove marcadores de lista */
+  padding: 0;
+  margin-top: 1em;
+}
+
+/* Links do menu */
+nav a {
+  color: rgb(143, 191, 225);   /* Cor azul claro */
+  text-decoration: none;      /* Remove sublinhado */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f1c40f;             /* Cor dourada ao passar o mouse */
+}
+
+/* Área principal da página */
+main {
+  padding: 2em;               /* Espaçamento interno */
+  max-width: 1200px;          /* Largura máxima do conteúdo */
+  margin: auto;               /* Centraliza horizontalmente */
+}
+
+/* Cada seção (pontos turísticos, hotéis, etc.) */
+section {
+  margin-bottom: 3em;         /* Espaço abaixo de cada seção */
+}
+
+/* Layout em grade para os artigos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo: mínimo 250px por coluna */
+  gap: 2em;                   /* Espaço entre os cards */
+}
+
+/* Estilo de cada artigo/card */
+article {
+  background-color: var(--bg-card); /* Cor do fundo do card */
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra leve */
+  transition: transform 0.2s;
+}
+
+article:hover {
+  transform: scale(1.02); /* Aumenta levemente ao passar o mouse */
+}
+
+/* Estilo do formulário */
+form {
+  display: flex;
+  flex-direction: column;     /* Alinha os elementos em coluna */
+  max-width: 500px;
+  background-color: var(--bg-card);
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Campos do formulário */
+input, textarea {
+  margin-bottom: 1em;         /* Espaço entre os campos */
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botões padrão (formulário, links etc.) */
+button {
+  padding: 0.75em;
+  background-color: var(--botao);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--botao-hover); /* Cor ao passar o mouse */
+}
+
+/* Imagens dentro dos artigos */
+img {
+  width: 100%;               /* Ocupa toda a largura do container */
+  border-radius: 10px;       /* Cantos arredondados */
+  transition: transform 0.3s ease; /* Animação suave */
+}
+
+article:hover img {
+  transform: scale(1.05);    /* Imagem cresce levemente no hover */
+}
+
+/* Estilo do rodapé */
+footer {
+  background-color: var(--bg-footer);
+  color: rgb(180, 26, 26);   /* Texto em vermelho escuro */
+  text-align: center;
+  padding: 1em;
+}
+
+/* Regras para telas pequenas (como celular) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;  /* Menu vertical em telas pequenas */
+    gap: 1em;
+  }
+}
+

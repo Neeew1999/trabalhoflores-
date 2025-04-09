@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define que o idioma do site é português do Brasil -->
+<head>
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 (acentuação correta etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante que o site se adapte corretamente em dispositivos móveis -->
+  <title>Guia de Viagem - Paris</title> <!-- Título que aparece na aba do navegador -->
+  
+  <!-- Link para o arquivo CSS externo -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Importação da fonte Montserrat do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Cabeçalho do site com título, botão de tema e navegação -->
+  <header>
+    <!-- Botão para alternar entre modo claro e escuro -->
+    <button id="toggle-tema">🌙 Modo Escuro</button>
+
+    <!-- Título principal da página -->
+    <h1>Guia de Viagem: Paris</h1>
+
+    <!-- Menu de navegação que permite rolar até as seções específicas da página -->
+    <nav>
+      <ul>
+        <li><a href="#pontos">Pontos Turísticos</a></li>
+        <li><a href="#hoteis">Hotéis</a></li>
+        <li><a href="#restaurantes">Restaurantes</a></li> <!-- Item novo no menu -->
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal do site -->
+  <main>
+
+    <!-- Seção de Pontos Turísticos -->
+    <section id="pontos">
+      <h2>Pontos Turísticos</h2>
+      <div class="grid">
+        <!-- Cada "article" representa um ponto turístico com título, imagem e descrição -->
+        <article>
+          <h3>Torre Eiffel</h3>
+          <img src="assets/imagens/torre.jpg" alt="Torre Eiffel">
+          <p>Um dos monumentos mais icônicos do mundo.</p>
+        </article>
+
+        <article>
+          <h3>Museu do Louvre</h3>
+          <img src="assets/imagens/louvre.jpg" alt="Museu do Louvre">
+          <p>O museu mais visitado do mundo, lar da Mona Lisa e outras obras-primas.</p>
+        </article>
+
+        <article>
+          <h3>Catedral de Notre-Dame</h3>
+          <img src="assets/imagens/catedral.jpg" alt="Catedral de Notre-Dame">
+          <p>Um dos maiores símbolos da arquitetura gótica francesa.</p>
+        </article>
+
+        <article>
+          <h3>Arco do Triunfo</h3>
+          <img src="assets/imagens/arco.jpg" alt="Arco do Triunfo">
+          <p>Construído em homenagem aos que lutaram e morreram pela França nas guerras napoleônicas.</p>
+        </article>
+
+        <article>
+          <h3>Montmartre</h3>
+          <img src="assets/imagens/montmartre.jpg" alt="Montmartre">
+          <p>Bairro artístico com vistas incríveis de Paris e a famosa Basílica de Sacré-Cœur.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção de Hotéis -->
+    <section id="hoteis">
+      <h2>Hotéis</h2>
+      <div class="grid">
+        <!-- Cada hotel com imagem, descrição e link para o site -->
+        <article>
+          <h3>Hotel Parisian</h3>
+          <img src="assets/imagens/hotelparisian.jpg" alt="Hotel Parisian">
+          <p>Conforto e elegância no coração da cidade.</p>
+          <a href="https://www.hotelparisianer.com" target="_blank"><button>Visitar Site</button></a>
+        </article>
+
+        <article>
+          <h3>Hotel Lumière</h3>
+          <img src="assets/imagens/hotellumieres.jpg" alt="Hotel Lumière">
+          <p>Estilo contemporâneo com vista para a Torre Eiffel.</p>
+          <a href="https://en.hotel-lumieres.com" target="_blank"><button>Visitar Site</button></a>
+        </article>
+
+        <article>
+          <h3>Le Royal Hôtel</h3>
+          <img src="assets/imagens/hotelroyal.jpg" alt="Le Royal Hôtel">
+          <p>Um clássico parisiense próximo ao Museu do Louvre.</p>
+          <a href="https://www.hotelleroyal.com/en" target="_blank"><button>Visitar Site</button></a>
+        </article>
+
+        <article>
+          <h3>Maison Breguet</h3>
+          <img src="assets/imagens/hotelmaison.avif" alt="Maison Breguet">
+          <p>Hotel charmoso em Paris com muito luxo e conforto.</p>
+          <a href="https://www.maisonbreguet.com/" target="_blank"><button>Visitar Site</button></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção de Restaurantes Recomendados -->
+    <section id="restaurantes">
+      <h2>Restaurantes Recomendados</h2>
+      <div class="grid">
+        <article>
+          <h3>Le Jules Verne</h3>
+          <img src="assets/imagens/LeJulesVerne.jpg" alt="Le Jules Verne">
+          <p>Restaurante elegante na Torre Eiffel com vista espetacular e culinária francesa contemporânea.</p>
+          <a href="https://www.restaurants-toureiffel.com/en/jules-verne-restaurant.html" target="_blank"><button>Ver Site</button></a>
+        </article>
+
+        <article>
+          <h3>Chez Janou</h3>
+          <img src="assets/imagens/chez-janou.jpeg" alt="Chez Janou">
+          <p>Bistrô acolhedor no Marais com pratos provençais e uma famosa mousse de chocolate.</p>
+          <a href="https://www.chezjanou.com/" target="_blank"><button>Ver Site</button></a>
+        </article>
+
+        <article>
+          <h3>Septime</h3>
+          <img src="assets/imagens/septime.jpg" alt="Septime">
+          <p>Estrela Michelin com menu degustação sazonal e ambiente minimalista.</p>
+          <a href="https://www.septime-charonne.fr/" target="_blank"><button>Ver Site</button></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção de Contato com Formulário -->
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <form id="form-contato">
+        <!-- Campo de texto para o nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <!-- Campo para email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Campo de texto maior para mensagem -->
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <!-- Botão para enviar o formulário -->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer>
+    <p>&copy; 2025 Guia de Viagem - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Inclusão do arquivo JavaScript que controla tema e formulário -->
+  <script src="assets/script/script.js"></script>
+</body>
+</html>
